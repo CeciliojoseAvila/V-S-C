@@ -1,0 +1,83 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #cac2c2;
+    font-family: Helvetica;
+}
+.container{
+    width: 90%;
+   /* border: 1px solid rgb(83, 72, 146);*/
+    margin: auto;
+}
+
+.users-list{
+   /* border: dotted 3px rgb(59, 37, 184);*/
+}
+.container h1{
+    text-align: center;
+    font-size: 32px;
+}
+.users-list{
+    background-color: rgb(243, 234, 234);
+    border: 1px solid rgb(179, 168, 168);
+    padding: 10px;
+}
+
+/*.users-list{
+    border: 1px solid green; //suprimí para colocarlo en el container
+}*/
+.user-data{
+    width: 70%;
+   /* border: 1px solid yellow;*/
+    margin: auto;
+   }
+
+.user-data img{
+width: 100%;
+border-radius: 50%;
+}
+.user-data h3{
+    text-align: center;
+    }
+
+    .btn-other-user{
+        background-color: rgb(30, 148, 3);
+        color: #fff;
+        border: none;
+        font-size: 1.3rem;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin: auto; /* este margin auto lo complementa el display: block; */
+        display: block;
+    }
+    
+@media (min-width: 768px){
+    .users-list{
+       /* border: solid 1px red;*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .user-data{
+       /* border: solid 1px rgb(29, 185, 8);*/
+        width: 48%;
+        margin: 0;
+    }
+    }        
+@media (min-width: 1200px){
+    .users-list{
+      max-width: 700px;
+      margin: auto;
+    }
+    .user-data{
+        /* border: solid 1px rgb(29, 185, 8);*/
+         width: 30%;       
+         text-align: center;  
+     }
+     .user-data{
+         width: 80%;         
+     }
+}

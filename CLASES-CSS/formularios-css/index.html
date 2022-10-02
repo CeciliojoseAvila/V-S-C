@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Formularios CSS</title>
+<link rel="stylesheet" href="../formularios-css/styles.css">
+</head>
+<body>
+    <h2>Formularios de contactos</h2>
+    <form action="https://formspree.io/f/mdojnqvv" method="post"><!-- //ANTES NO ME ENVIABA PORQUE FALTABA AGREGAR POST EN EL method="post" -->
+
+    <div> <!-- EL <DIV> ES PARA EL SALTO DE LINEA -->
+        <label for="usarname">Nombre completo:</label>
+        <input type="text" name="usarname" id="usarname" placeholder="Escribe tu nombre">
+    </div>
+    <div> <!-- EL <DIV> ES PARA EL SALTO DE LINEA -->
+        <label for="email">Correo electrónico:</label> 
+        <input type="email" name="email" id="email" placeholder="user@email.com"> <br>
+    
+        <!-- //continuamos con el Formulario email -->
+    <label for="país">Elegir un país</label>
+    <select name="país" id="país">
+        <option value="Ar">Argentina</option>
+        <option value="Col">Colombia</option>
+        <option value="Ven">Venezuela</option>
+        <option value="Uru">Uruguay</option>
+        <option value="Ja">Jamaica</option>
+        <option value="EU">Estados Unidos</option>
+        <option value="Ca">Canadá</option>
+        <option value="Ho">Honduras</option>
+    
+    </select> 
+    
+    </div>
+    <!-- //agregar comentario sgte-->
+    <div>
+        <label for="comentarios">Tus comentarios:</label> <br>
+    <!-- //agregar comentarios con <textarea name="" id="" cols="30" rows="10"></textarea> -->
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+    </div>
+    <!-- /añadir una pregunta con div y por dentro pongo p para texto-->
+    <div>
+        <p>¿ Sabes HTML ?</p> <!-- //AHORA UN INPUT con "<input type="button" value=""> "-->
+        <input id="Sabes-html-opt-01" type="radio" value="Si" name="Sabes-html"> <!-- // <label for="Si"></label> -->
+        <label for="Sabes-html-opt-01">Si</label> <!-- //AHORA HACEMOS OTRO PARA EL NO. COPIAMOS Y MODIFICAMOS -->
+        
+        <input  id="Sabes-html-opt-02" type="radio" value="No" name="Sabes-html"> <!-- // <label for="Si"></label> -->
+        <label for="Sabes-html-opt-02">No</label> <br>
+
+    </div>
+    <button type="submit"> Enviar </button>
+    </form> <br>
+
+    
+
+</body>
+</html>

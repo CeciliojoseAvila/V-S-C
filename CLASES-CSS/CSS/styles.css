@@ -1,0 +1,65 @@
+html{
+font-size: 10px;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+
+margin: 0;
+}
+.container{
+background-color: yellow;
+border: 10px solid #000;
+padding: 10px;
+display: flex;
+flex-wrap: wrap;
+
+}
+/*  <div class="container"> 
+        <div class="column">1 </div>
+        <div class="column">2 </div> //se pueden agregar tantas columnas como se deseen y las podemos enumerar*/
+.column{
+    /*width: 50% ;*/
+    width: 100%;
+    height: 100px;
+    margin: 10px 0 ;
+    border: 1px solid firebrick;
+    background-color: #f2f2f2;
+    /*box-sizing: border-box;*/
+    font-size: 4rem; /*para aumentar el tamaño*/
+}
+
+@media (min-width: 560px){
+.container{
+    background-color: pink;
+    margin: 40px 80px;
+    background-color: aqua;
+    justify-content: center;
+}
+.column{
+    width: 80%;
+}
+}
+
+@media (min-width: 768px){
+    .container{
+        justify-content: space-between;
+    }
+    .column{
+        width: 30%;
+    }
+}
+
+
+@media (min-width: 1200px){
+    .container{
+       width: 1100px;
+       margin: 40px auto;
+       background-color: transparent;
+    }
+    .column{
+        width: 33.33%;
+    }
+}
+
