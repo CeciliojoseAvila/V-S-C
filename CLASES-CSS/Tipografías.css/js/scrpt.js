@@ -51,6 +51,8 @@ loginForm.addEventListener("submit", submitData);
     } //movemos para arriba este codigo
 })*/ //lo mismo abajo con password
 
+/*
+//OBJETOS Y METODOS DE UN OBJETO LITERAL EN JS
 var user= {
     nombre: "Cecilio",
     apellido: "Avila",
@@ -78,5 +80,25 @@ for(var i=0; i< students.length; i++){
     //console.log(students[i])//asi me muestra todos los datos registrados
    // console.log(students[i].fullName) //acá solo los nombres
    studentsListUL.innerHTML += "<li>" + students[i].fullName +  "  Está estudiando " + students[i].subject + "</li>";
-
 }
+//ACA TERMINA LA CLASE DE OBJETOS Y METODOS O FUNCIONES DE UN OBJETO LITERAL EN JS
+*/
+
+//AHORA TRABAJARE LAS APIs con fetch
+//ahora capturo
+var movieDataDiv = document.querySelector("#movieData")
+fetch("https://private.omdbapi.com/?apikey=bef9c583&t=Titanic")//acá copié y pegué el link JSON
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    console.log(data);
+   movieDataDiv.innerHTML= "<h2 class='alert alert-success'>" + data.Title + "</h2>"; //esto para darle un estilo al titulo
+   movieDataDiv.innerHTML= "<img src=' " + data.Poster + " '/>";
+   movieDataDiv.innerHTML +=  "<p>" + data.Plot + "</p>"; //COLOCO EL += PARA CONSERVE LOS DATOS ANTERIORES Y LOS SGTES
+   movieDataDiv.innerHTML += "<p>" + data.Actors + "</p>"; 
+
+})
+.catch(function(error){//el catch se coloca solo para mostrar si ocurre un error
+    console.log(error);
+});
